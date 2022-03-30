@@ -16,4 +16,8 @@ class Patient(models.Model):
     address = models.TextField()
 
 
-
+class Appointment(models.Model):
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    date = models.DateField()
+    time = models.TimeField()
