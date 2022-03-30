@@ -2,7 +2,7 @@ from distutils.log import error
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, logout, login
 
 
 # Create your views here.
@@ -33,7 +33,7 @@ def Login(request):
         user = authenticate(username= uname, password = pwd )
         try:
             if user.is_staff:
-                Login(request,user)
+                login(request,user)
                 error = "No"
 
             else:
@@ -47,10 +47,10 @@ def Login(request):
 
     # logout views
 
-def Logout_admin(request):
+def Logout(request):
     if not request.user.is_staff:
         return redirect('login')
-
+        
     logout(request)
     return redirect('login')
 

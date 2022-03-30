@@ -26,11 +26,16 @@
                   Login
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Admin</a>
+                  <a class="dropdown-item" href="{% url 'login' %}">Admin</a>
                   <a class="dropdown-item" href="#">Doctor</a>
                   <a class="dropdown-item" href="#">Patient</a>
                 </div>
-              </li>   
+              </li> 
+              {% if request.user.is_staff %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout </a>
+              </li>
+              {% endif %}  
             </ul>
             </div>
     </nav>

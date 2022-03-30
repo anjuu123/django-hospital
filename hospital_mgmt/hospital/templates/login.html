@@ -6,11 +6,23 @@
 <br>
 <!-- show alert if login success -->
 
-
+{% ifequal error "no" %}
+<script>
+    window.location="{% url 'home' %}";
+</script>
+{% endifequal %}
 
 <!-- show if login didnt success -->
+{% ifequal error "yes" %}
+<script>
+    alert('invalid');
+    window.location="{% url 'home' %}";
+</script>
+{% endifequal %}
+
+
 <div class="container">
-    <h2 class="text-center">Admin Login</h2>
+    <h2 class="text-center"> Login</h2>
     <form method="POST">
         {% csrf_token %}
         <br>
