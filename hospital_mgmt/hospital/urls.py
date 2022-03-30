@@ -1,8 +1,9 @@
 
 from django.urls import path
-from hospital.views import About
+from hospital.views import Home, About
 
 urlpatterns = [
-    path('',About,name='about'),
+    path('',Home,name='home'),
+    path('about',About,name='about'),
    
 ]
