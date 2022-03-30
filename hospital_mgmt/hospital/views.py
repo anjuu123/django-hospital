@@ -41,7 +41,18 @@ def Login(request):
 
         except:
             error = "yes"
-            d = {'error': error}
-            return render(request, 'login.html', d)
+    d = {'error': error}
+    return render(request, 'login.html', d)
+
+
+    # logout views
+
+def Logout_admin(request):
+    if not request.user.is_staff:
+        return redirect('login')
+
+    logout(request)
+    return redirect('login')
+
 
 

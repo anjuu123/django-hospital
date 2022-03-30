@@ -1,13 +1,27 @@
+{% include 'base.html' %}
+{% include 'navigation.html' %}
+{%block content%}
+<br>
+<br>
+<br>
+<!-- show alert if login success -->
+
+
+
+<!-- show if login didnt success -->
 <div class="container">
     <h2 class="text-center">Admin Login</h2>
     <form method="POST">
         {% csrf_token %}
-        <label>Admin Name</label>
+        <br>
+        <br>
         <input type="text" class="form-control" name="uname" placeholder="Admin Name">
-
-        <label>Password</label>
+<br>
         <input type="password" class="form-control" name="pwd" placeholder="Password">
-
+<br>
         <input type="submit" value="Login" class="form-control btn btn-primary">
     </form>
 </div>
+
+{%endblock%}
+
