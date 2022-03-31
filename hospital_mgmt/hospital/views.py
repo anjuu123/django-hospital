@@ -6,8 +6,8 @@ from django.contrib.auth import authenticate, logout, login
 
 
 # Create your views here.
-def Home(request):
-    return render(request, 'home.html')
+def Index(request):
+    return render(request, 'index.html')
 
 def About(request):
     return render(request, 'about.html')
@@ -18,10 +18,10 @@ def Contact(request):
 def Service(request):
     return render(request, 'service.html')
 
-def Index(request):
+def Dashboard(request):
     if not request.user.is_staff:
         return redirect('login')
-    return render(request, 'index.html')
+    return render(request, 'dashboard.html')
 
 
 # login view
@@ -34,15 +34,15 @@ def Login(request):
         try:
             if user.is_staff:
                 login(request,user)
-                error = "No"
-
+                error = "no"
+    
             else:
                 error = "yes"
 
         except:
             error = "yes"
-    d = {'error': error}
-    return render(request, 'login.html', d)
+    data = {'error': error}
+    return render(request, 'login.html', data)
 
 
     # logout views
@@ -52,7 +52,7 @@ def Logout(request):
         return redirect('login')
         
     logout(request)
-    return redirect('login')
+    return redirect('index')
 
 
 
