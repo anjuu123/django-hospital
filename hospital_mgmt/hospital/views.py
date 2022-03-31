@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, logout, login
-from .models import Doctor
+from .models import Doctor, Patient
 
 # Create your views here.
 def Index(request):
@@ -88,3 +88,14 @@ def Add_Doctor(request):
 
     d = {'error':error}
     return render(request,'add_doctor.html',d)
+
+
+    # views all patients
+
+def View_Patient(request):
+    if not request.user.is_staff:
+        return redirect('login')
+
+    pat = Patient.objects.all()
+    d = {'pat' : pat}
+    return render(request, 'view_patient.html', d)
