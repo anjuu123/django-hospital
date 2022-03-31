@@ -1,9 +1,10 @@
 from distutils.log import error
+from unicodedata import name
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, logout, login
-from .models import Doctor, Patient
+from .models import Appointment, Doctor, Patient
 
 # Create your views here.
 def Index(request):
@@ -94,6 +95,8 @@ def Delete_Doctor(request, id):
 
 # add patients
 def Add_Patient(request):
+    if not request.user.is_staff:
+        return redirect('login')
     error=""
     if request.method=="POST":
         n = request.POST['name']
@@ -131,16 +134,24 @@ def Delete_Patient(request, id):
 # add appointment
 def Add_Appointment(request):
     error=""
+    if not request.user.is_staff:
+        return redirect('login')
+    doctor1 = Doctor.objects.all()
+    patient1 = Patient.objects.all()
     if request.method=="POST":
-        n = request.POST['name']
-        c = request.POST['mobile']
-        ad = request.POST['address']
+        d = request.POST['doctor']
+        p = request.POST['patient']
+        da = request.POST['date']
+        t = request.POST['time']
+        doctor = Doctor.objects.filter(name=d).first()
+        patient = Patient.objects.filter(name=p).first()
+
         try:
-            Patient.objects.create(name=n, mobile=c, address=ad)
+            Appointment.objects.create(doctor=d, patient=p, date=da, time=t)
             error="no"
         except:
             error="Yes"
 
-    d = {'error':error}
-    return render(request,'add_patient.html',d)
+    d = {'doctor': doctor1, 'patient': patient1, 'error': error }
+    return render(request,'add_appointment.html',d)
 
