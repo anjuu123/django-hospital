@@ -9,6 +9,9 @@ class Doctor(models.Model):
     mobile = models.IntegerField()
     speciality = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.name
+
 
 class Patient(models.Model):
     name = models.CharField(max_length=50)
