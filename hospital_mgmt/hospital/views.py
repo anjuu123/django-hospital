@@ -41,8 +41,8 @@ def Login(request):
 
         except:
             error = "yes"
-    data = {'error': error}
-    return render(request, 'login.html', data)
+    d = {'error': error}
+    return render(request, 'login.html', d)
 
 
     # logout views
@@ -73,4 +73,18 @@ def Delete_Doctor(request, id):
     doctor.delete()
     return redirect('view_doctor')
 
+# add doctor
+def Add_Doctor(request):
+    error=""
+    if request.method=="POST":
+        n = request.POST['name']
+        c = request.POST['mobile']
+        sp = request.POST['speciality']
+        try:
+            Doctor.objects.create(name=n, mobile=c, speciality = sp)
+            error="no"
+        except:
+            error="Yes"
 
+    d = {'error':error}
+    return render(request,'add_doctor.html',d)
