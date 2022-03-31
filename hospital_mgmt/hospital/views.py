@@ -126,3 +126,21 @@ def Delete_Patient(request, id):
     patient = Patient.objects.get(id = id)
     patient.delete()
     return redirect('view_patient')
+
+
+# add appointment
+def Add_Appointment(request):
+    error=""
+    if request.method=="POST":
+        n = request.POST['name']
+        c = request.POST['mobile']
+        ad = request.POST['address']
+        try:
+            Patient.objects.create(name=n, mobile=c, address=ad)
+            error="no"
+        except:
+            error="Yes"
+
+    d = {'error':error}
+    return render(request,'add_patient.html',d)
+

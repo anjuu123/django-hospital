@@ -1,15 +1,21 @@
 {% include 'base.html' %}
 {% include 'navigation.html' %}
-
+{%block content%}
+<br>
+<br>
+<br>
 <div>
-    <h2>View Patient</h2>
-    <table class="table table-info">
+  
+    <h2 class="text-center">View Patient</h2>
+    <br>
+    <table id="example" class="table table-info">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Mobile</th>
                 <th>Address</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -26,3 +32,6 @@
         </tbody>
     </table>
 </div>
+
+{%endblock%}
+{% include 'footer.html' %}
