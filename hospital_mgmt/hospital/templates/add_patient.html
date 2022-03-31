@@ -1,0 +1,37 @@
+{% include 'base.html' %}
+{%block content%}
+
+<!-- show record success -->
+
+{% ifequal error "yes" %}
+<script>
+    alert('invalid');  
+</script>
+{% endifequal %}
+
+{% ifequal error "no" %}
+<script>
+    alert('Record Save');
+    window.location = "{% url 'view_patient' %}"
+</script>
+{% endifequal %}
+
+
+<div class="container">
+    
+    <h2 class="text-center">Add Patient</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <br>
+        <br>
+        <input type="text" class="form-control" name="name" placeholder="Patient Name">
+<br>
+        <input type="text" class="form-control" name="mobile" placeholder="Mobile">
+<br>
+<input type="text" class="form-control" name="address" placeholder="Address">
+<br>
+        <input type="submit" value="Add" class="form-control btn btn-primary">
+    </form>
+</div>
+
+{%endblock%}
