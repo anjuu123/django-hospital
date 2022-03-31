@@ -6,17 +6,16 @@
 <br>
 <!-- show alert if login success -->
 
-{% ifequal error "no" %}
-<script>
-    window.location="{% url 'home' %}";
-</script>
-{% endifequal %}
-
-<!-- show if login didnt success -->
 {% ifequal error "yes" %}
 <script>
     alert('invalid');
-    window.location="{% url 'home' %}";
+    
+</script>
+{% endifequal %}
+{% ifequal error "no" %}
+<script>
+    alert('log in successfully');
+    window.location = "{% url 'dashboard' %}"
 </script>
 {% endifequal %}
 
