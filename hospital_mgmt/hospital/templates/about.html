@@ -1,7 +1,44 @@
-{% include 'base.html' %}
-{% include 'navigation.html' %}
-<br>
-<br>
-<br>
-<br>
-<h1 class="text-center">About Us</h1>
+{% include 'base.html' %} {% include 'navigation.html' %} {% load static %}
+<br />
+<br />
+<br />
+<br />
+
+{%block content%}
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6 pt-3">
+      <h1 class="h2 mb-4 text-center" style="font-weight: 600">
+        About Us 
+      </h1>
+      <p class="text-secondary" style="line-height: 2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+        repellat iure laboriosam cum voluptatum, nam minima deserunt aut?
+        Distinctio voluptatibus dolor quaerat quo omnis illo sequi at velit,
+        odit quod! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+        repellat iure laboriosam cum voluptatum, nam minima deserunt aut?
+        Distinctio voluptatibus dolor quaerat quo omnis illo sequi at velit,
+        odit quod!
+      </p>
+    </div>
+
+    <div class="col-md-6 text-center">
+        <div class="col-md-6 mb-3">
+          <img
+            src="{% static 'images/slide.jpg' %}"
+            alt="img2" width="450px" height="300px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <img
+    src="{% static 'images/hospital.jpeg' %}"
+   alt="img3"width="500px" height="300px"
+  />
+</a>
+
+{%endblock%}
