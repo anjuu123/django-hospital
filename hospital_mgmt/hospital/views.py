@@ -55,6 +55,21 @@ def Logout(request):
     return redirect('index')
 
 
+# add doctor
+def Add_Doctor(request):
+    error=""
+    if request.method=="POST":
+        n = request.POST['name']
+        c = request.POST['mobile']
+        sp = request.POST['speciality']
+        try:
+            Doctor.objects.create(name=n, mobile=c, speciality = sp)
+            error="no"
+        except:
+            error="Yes"
+
+    d = {'error':error}
+    return render(request,'add_doctor.html',d)
 
 # views all doctors
 
@@ -73,22 +88,25 @@ def Delete_Doctor(request, id):
     doctor.delete()
     return redirect('view_doctor')
 
-# add doctor
-def Add_Doctor(request):
+
+
+
+
+# add patients
+def Add_Patient(request):
     error=""
     if request.method=="POST":
         n = request.POST['name']
         c = request.POST['mobile']
-        sp = request.POST['speciality']
+        ad = request.POST['address']
         try:
-            Doctor.objects.create(name=n, mobile=c, speciality = sp)
+            Patient.objects.create(name=n, mobile=c, address=ad)
             error="no"
         except:
             error="Yes"
 
     d = {'error':error}
-    return render(request,'add_doctor.html',d)
-
+    return render(request,'add_patient.html',d)
 
     # views all patients
 
@@ -99,3 +117,12 @@ def View_Patient(request):
     pat = Patient.objects.all()
     d = {'pat' : pat}
     return render(request, 'view_patient.html', d)
+
+# delete patient by id
+def Delete_Patient(request, id):
+    if not request.user.is_staff:
+        return redirect('login')
+
+    patient = Patient.objects.get(id = id)
+    patient.delete()
+    return redirect('view_patient')
