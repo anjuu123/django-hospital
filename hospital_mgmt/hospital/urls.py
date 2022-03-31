@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import Index, About, Logout, Service, Contact, Login,Dashboard, View_Doctor
+from .views import Index, About, Logout, Service, Contact, Login,Dashboard, View_Doctor,Delete_Doctor
 
 
 urlpatterns = [
@@ -12,7 +12,7 @@ urlpatterns = [
     path('logout/',Logout,name='logout'),
     path('dashboard/',Dashboard,name='dashboard'),
     path('view_doctor/',View_Doctor,name='view_doctor'),
-    
+    path('delete_doctor(<int:id>)/',Delete_Doctor,name='delete_doctor'),
    
 ]
 

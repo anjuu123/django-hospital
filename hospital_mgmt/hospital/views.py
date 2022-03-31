@@ -56,7 +56,7 @@ def Logout(request):
 
 
 
-# doctor views
+# views all doctors
 
 def View_Doctor(request):
     if not request.user.is_staff:
@@ -65,6 +65,12 @@ def View_Doctor(request):
     d = {'doc' : doc}
     return render(request, 'view_doctor.html', d)
 
-
+# delete doctor by id
+def Delete_Doctor(request, id):
+    if not request.user.is_staff:
+        return redirect('login')
+    doctor = Doctor.objects.get(id = id)
+    doctor.delete()
+    return redirect('view_doctor')
 
 
