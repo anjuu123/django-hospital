@@ -1,1 +1,17 @@
-<h1>Patient Dashboard</h1>
+{% include 'base.html' %} {% load static %} {% include 'navigation.html' %}
+
+<br />
+<br />
+<br />
+
+{%block content%}
+<div class="container homepage">
+  <img
+    src="{% static 'images/index.jpg' %}"
+    alt="homepage_img"
+  />
+  <button class="btn btn-danger appoint">Take Appointment</button>
+  
+</div>
+  {%endblock%}
+
