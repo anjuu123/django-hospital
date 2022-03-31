@@ -1,0 +1,25 @@
+{% include 'base.html' %}
+<div>
+    <h2>View Doctor</h2>
+    <table class="table table-info">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Speciality</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in doc %}
+            <tr>
+               <td> {{i.id}}</td>
+               <td> {{i.name}}</td>
+               <td> {{i.mobile}}</td>
+               <td> {{i.speciality}}</td>
+              
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
