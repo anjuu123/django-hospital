@@ -1,7 +1,7 @@
 
 from django.urls import path
-from .views import Index, About, Logout, Service, Contact, Login,Dashboard
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from .views import Index, About, Logout, Service, Contact, Login,Dashboard, View_Doctor
+
 
 urlpatterns = [
     path('',Index,name='index'),
@@ -11,8 +11,9 @@ urlpatterns = [
     path('admin_login/',Login,name='login'),
     path('logout/',Logout,name='logout'),
     path('dashboard/',Dashboard,name='dashboard'),
+    path('view_doctor/',View_Doctor,name='view_doctor'),
+    
    
 ]
 
 
-urlpatterns += staticfiles_urlpatterns()

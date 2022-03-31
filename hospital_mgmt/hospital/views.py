@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, logout, login
-
+from .models import Doctor
 
 # Create your views here.
 def Index(request):
@@ -53,6 +53,18 @@ def Logout(request):
         
     logout(request)
     return redirect('index')
+
+
+
+# doctor views
+
+def View_Doctor(request):
+    if not request.user.is_staff:
+        return redirect('login')
+    doc = Doctor.objects.all()
+    d = {'doc' : doc}
+    return render(request, 'view_doctor.html', d)
+
 
 
 
