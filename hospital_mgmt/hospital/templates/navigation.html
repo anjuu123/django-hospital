@@ -9,21 +9,21 @@
       <ul class="navbar-nav ml-auto">
         
         {% if not request.user.is_staff %}
-        <li class="nav-item active">
-          <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+        <li  class="nav-item">
+          <a id="nav-menu" class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">About </a>
+          <a id="nav-menu" class="nav-link" href="{% url 'about' %}">About </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'service' %}">Services </a>
+          <a id="nav-menu" class="nav-link" href="{% url 'service' %}">Services </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact' %}">Contact </a>
+        <li  class="nav-item">
+          <a id="nav-menu" class="nav-link" href="{% url 'contact' %}">Contact </a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'login' %}">Login </a>
+          <a id="nav-menu" class="nav-link" href="{% url 'login' %}">Login </a>
         </li>
         {% endif %}
 
@@ -35,8 +35,9 @@
               Doctor
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="{% url 'view_doctor' %}">View Doctor</a>
+             
               <a class="dropdown-item" href="{% url 'add_doctor' %}">Add Doctor</a>
+              <a class="dropdown-item" href="{% url 'view_doctor' %}">View Doctor</a>
           </li>
 
 
@@ -46,8 +47,8 @@
               Patient
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="{% url 'view_patient' %}">View Patient</a>
               <a class="dropdown-item" href="{% url 'add_patient' %}">Add Patient</a>
+              <a class="dropdown-item" href="{% url 'view_patient' %}">View Patient</a>
           </li>
 
 
@@ -56,9 +57,9 @@
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Appointment
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">View Appointment</a>
-              <a class="dropdown-item" href="#">Add Appointment</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> 
+              <a class="dropdown-item" href="{% url 'add_appointment' %}">Add Appointment</a>
+              <a class="dropdown-item" href="{% url 'view_appointment' %}">View Appointment</a>
           </li>
 
 
