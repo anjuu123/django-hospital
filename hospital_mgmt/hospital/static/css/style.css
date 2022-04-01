@@ -3,6 +3,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 /* for mobile version */
+
+/* common tags */
+h1
+{
+    font-family:'Lato', sans-serif ;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p
+{
+    font-family:'Lato', sans-serif ;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+
 /* navigation */
 .navbar-brand
 {
@@ -28,3 +46,55 @@
     font-weight: bold;
 
 }
+
+/* homepage image page */
+
+.homepage img{
+width: 390px;
+height: 330px;
+margin-top: 60px;
+margin-left: -15px;
+}
+
+.appoint{
+margin-top: -47rem;
+margin-left: 10rem;
+font-size: 20px;
+
+}
+
+/* about section */
+.about-img
+{
+    height: 370px;
+    width: 330px;
+}
+
+/* footer  */
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #0000FF;
+    text-align: center;
+    color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+}
+
+.company-name{
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+    html{
+    font-size: 50%;
+    }
+}    

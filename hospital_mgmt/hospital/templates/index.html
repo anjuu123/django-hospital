@@ -1,8 +1,7 @@
-{% include 'base.html' %} {% load static %} {% include 'navigation.html' %}
+{% include 'base.html' %} 
+{% load static %} 
+{% include 'navigation.html' %}
 
-<br />
-<br />
-<br />
 
 {%block content%}
 <div class="container homepage">
@@ -11,7 +10,46 @@
     alt="homepage_img"
   />
   <button class="btn btn-danger appoint">Take Appointment</button>
+</div>
+
+
+
+<!-- about section -->
+<div id="about">
+  <div class="container my-5 ">
+    <div class="row">
+      <div class="col-sm-4 pt-2">
+        <h1 class=" mb-4 text-center">
+          About Us 
+        </h1>
+        <p class="text-secondary">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          repellat iure laboriosam cum voluptatum, nam minima deserunt aut?
+          Distinctio voluptatibus dolor quaerat quo omnis illo sequi at velit,
+          odit quod! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          repellat iure laboriosam cum voluptatum, nam minima deserunt aut?
+          Distinctio voluptatibus dolor quaerat quo omnis illo sequi at velit,
+          odit quod!
+        </p>
+      </div>
   
+      <div class="col-md-6 text-center">
+          <div class="col-md-6 mb-3 about-img">
+            <img
+              src="{% static 'images/slide.jpg' %}"
+              alt="img2" class="about-img"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- <img
+      src="{% static 'images/hospital.jpeg' %}"
+     alt="img3"width="500px" height="300px"
+    /> -->
+
 </div>
   {%endblock%}
 

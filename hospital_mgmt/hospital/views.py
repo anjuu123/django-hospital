@@ -164,3 +164,12 @@ def View_Appointment(request):
     apt = Appointment.objects.all()
     d = {'apt' : apt}
     return render(request, 'view_appointment.html', d)
+
+# delete appointment by id
+def Delete_Appointment(request, id):
+    if not request.user.is_staff:
+        return redirect('login')
+    appointment = Appointment.objects.get(id = id)
+    appointment.delete()
+    return redirect('view_patient')
+
