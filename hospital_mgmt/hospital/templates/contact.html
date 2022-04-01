@@ -1,0 +1,30 @@
+{% include 'base.html' %} {% load static %} {%block content%}
+<div id="contact">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6 pt-2">
+        <h1 class="mb-4 mt-5 text-center add">Contact Us</h1>
+       <h5 class="text-center contact-text">Address</h5>
+       <p  class="text-center add">222 Xyz Street, Philadelphia, PA</p>
+
+       <h5 class="text-center">Phone</h5>
+       <p class="text-center add">(111)-222-3333</p>
+       <p  class="text-center add">(222)-333-1111</p>
+
+       <h3 class="text-center add">Open 24/7</h3>
+      </div>
+
+      <div class="col-md-6">
+        <div class="col-md-6 mb-3"></div>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12218.527273835178!2d-75.23623769999999!3d40.038999000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1648842477935!5m2!1sen!2sus"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="map"
+      ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

@@ -1,45 +1,43 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 /* for mobile version */
 
 /* common tags */
-h1
-{
-    font-family:'Lato', sans-serif ;
+h1 {
+    font-family: 'Lato', sans-serif;
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-p
-{
-    font-family:'Lato', sans-serif ;
+p {
+    font-family: 'Lato', sans-serif;
     font-size: 22px;
     line-height: 1.5;
 }
 
 
+
+
 /* navigation */
-.navbar-brand
-{
-  font-family: 'Cookie', cursive;
-  font-size:35px;
-  margin: 0px;
-  font-weight: bolder;
+.navbar-brand {
+    font-family: 'Cookie', cursive;
+    font-size: 35px;
+    margin: 0px;
+    font-weight: bolder;
 }
 
-.navbar-toggler
-{
-    font-size:20px; 
+.navbar-toggler {
+    font-size: 20px;
+    margin-right: -2px;
 }
-.nav-item
-{
+
+.nav-item {
     color: #fff;
 }
-#nav-menu
-{
+
+#nav-menu {
     font-family: 'Lato', sans-serif;
     color: #fff;
     font-size: 20px;
@@ -49,64 +47,234 @@ p
 
 /* homepage image page */
 
-.homepage img{
-width: 390px;
-height: 330px;
-margin-top: 60px;
-margin-left: -15px;
+.homepage img {
+    width: 105%;
+    height: 330px;
+    margin-top: 0px;
+    margin-left: -13px;
 }
 
-.appoint{
-margin-top: -47rem;
-margin-left: 10rem;
-font-size: 20px;
+.appoint {
+    margin-top: -2rem;
+    margin-left: 7rem;
+    font-size: 20px;
 
 }
 
 /* about section */
-.about-img
-{
-    height: 350px;
+.about-img {
+    height: 300px;
     width: 350px;
-    margin-left: -5px;
+    margin-left: 15px;
 }
 
+.text-2 {
+    margin-bottom: 0px;
+}
+
+/* contact */
+.map {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 300px;
+    margin-left: -10px;
+}
+
+
+#contact {
+    background-color: #A2B4DE;
+}
+
+h5 {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: black;
+    font-weight: 1000;
+
+}
+
+h3 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+
+
 /* footer  */
-.footer{
+.footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #0000FF;
+    background: #4266BE;
     text-align: center;
-    
-    
+
+
 }
 
-.para-name{
+.para-name {
     margin-top: 0.5rem;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     color: #fff;
     font-weight: bold;
 
-    
+
 }
 
-.para-name span
-{
+.para-name span {
     font-family: 'Cookie', cursive;
     font-size: 25px;
 }
 
-@media (max-width: 500px){
-    html{
-        font-size: 50%;
-    }
-}    
 
-@media(min-width: 501px) and (max-width: 768px){
-    html{
-    font-size: 50%;
+
+/* for tablet */
+
+@media only screen and (min-width: 768px) {
+
+    .homepage img {
+        width: 111%;
+        height: 330px;
+        margin-top: -20px;
+        margin-left: -40px;
     }
-}    
+
+    .appoint {
+        margin-left: 15rem;
+        font-size: 20px;
+        margin-top: -35px;
+    }
+
+
+    .about-text {
+        font-size: 22px;
+        margin-bottom: -30px;
+        margin-left: -30px;
+    }
+
+    .about-img {
+        height: 400px;
+        width: 350px;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .text-2 {
+        margin-bottom: 0px;
+    }
+
+    /* contact */
+
+    .map {
+        width: 400px;
+        margin-bottom: 30px;
+        height: 330px;
+        margin-left: -40px;
+    }
+
+    h3 {
+        margin-top: 30px;
+        color: red;
+        font-weight: bold;
+    }
+
+    /* footer */
+    .para-name {
+        font-size: 17px;
+        letter-spacing: 1;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+    .homepage img {
+        width: 119rem;
+        height: 500px;
+        margin-left: -25rem;
+        margin-top: 0px;
+    }
+
+    .appoint {
+        margin-left: 15rem;
+        font-size: 30px;
+        padding: 20px;
+    }
+
+
+
+    /* navbar */
+
+    .navbar-brand {
+        font-size: 40px;
+    }
+
+    #nav-menu {
+        font-family: 'Lato', sans-serif;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+
+    }
+
+
+    /* about */
+
+    .about-text {
+        font-size: 22px;
+        margin-left: -100px;
+    }
+
+    .about-img {
+        height: 400px;
+        width: 800px;
+        margin-left: 70px;
+        margin-top:0px;
+    }
+
+    .text-2 {
+        margin-top:-30px;
+    }
+
+
+    /* contact */
+
+    .map {
+        width: 700px;
+        margin-bottom: 30px;
+        height: 400px;
+        margin-left: -40px;
+    }
+
+    h3 {
+        margin-top: 30px;
+        color: red;
+        font-weight: bold;
+        
+    }
+
+    h5 {
+       
+        margin-left: -30rem;
+    
+    }
+
+    .add
+    {
+        margin-left: -30rem;
+    }
+
+
+    /* footer */
+    .para-name {
+        font-size: 22px;
+        letter-spacing: 1;
+    }
+
+
+}
