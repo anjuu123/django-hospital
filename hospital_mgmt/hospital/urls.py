@@ -5,9 +5,7 @@ from .views import Add_Appointment, Add_Patient, Delete_Appointment, Delete_Pati
 
 urlpatterns = [
     path('',Index,name='index'),
-    path('about/',About,name='about'),
     path('service/',Service,name='service'),
-    path('contact/',Contact,name='contact'),
 
     # url path for admin
     path('admin_login/',Login,name='login'),
