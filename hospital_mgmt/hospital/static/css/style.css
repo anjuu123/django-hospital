@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* for mobile version */
+/* navigation */
+.navbar-brand
+{
+  font-family: 'Cookie', cursive;
+  font-size:35px;
+  margin: 0px;
+  font-weight: bolder;
+}
+
+.navbar-toggler
+{
+    font-size:20px; 
+}
+.nav-item
+{
+    color: #fff;
+}
+#nav-menu
+{
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+}
