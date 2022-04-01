@@ -147,7 +147,7 @@ def Add_Appointment(request):
         patient = Patient.objects.filter(name=p).first()
 
         try:
-            Appointment.objects.create(doctor=d, patient=p, date=da, time=t)
+            Appointment.objects.create(doctor=doctor, patient=patient, date=da, time=t)
             error="no"
         except:
             error="Yes"
@@ -155,3 +155,12 @@ def Add_Appointment(request):
     d = {'doctor': doctor1, 'patient': patient1, 'error': error }
     return render(request,'add_appointment.html',d)
 
+
+  # views all appointment
+
+def View_Appointment(request):
+    if not request.user.is_staff:
+        return redirect('login')
+    apt = Appointment.objects.all()
+    d = {'apt' : apt}
+    return render(request, 'view_appointment.html', d)
