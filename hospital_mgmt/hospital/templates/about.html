@@ -1,46 +1,70 @@
 <!-- about section -->
-{% include 'base.html' %} 
-{% load static %} 
+{% include 'base.html' %}
+{% load static %}
 
 {%block content%}
 <div id="about">
-    <div class="container my-5 ">
-      <div class="row">
-        <div class="col-sm-4 pt-2">
-          <h1 class=" mb-4 text-center">
-          About Us 
-          </h1>
-          <p class="text-secondary about-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            repellat iure laboriosam cum voluptatum, nam minima deserunt aut?
-            Distinctio voluptatibus dolor quaerat Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            repellat iure laboriosam cum 
-          </p>
-        </div>
-    
-        <div class="col-md-6 text-center">
-            <div class="col-md-6 mb-3 about-img">
-              <img
-                src="{% static 'images/slide.jpg' %}"
-                alt="img2" class="about-img"
-              />
-            </div>
-          </div>
+  <div class="container my-5 ">
+    <div class="row">
+      <div class="col-sm-4 pt-2">
+        <h1 class=" mb-4 text-center">
+          About Us
+        </h1>
+        <p class="text-secondary about-text">
+          We are committed to improving health outcomes for people of color and ensuring that all  citizens have access
+          to high-quality, affordable care. We seek to achieve permanent improvements in people's lives via public
+          policy, grantmaking, and leadership development.
+          Everyone, regardless of color, ethnicity, or financial level, deserves the chance to be as healthy as
+          possible. We are committed to enhancing the health of all of our community members. We work to improve the
+          health of people of color and ensure that all citizens have access to affordable health care.
+        </p>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <div class="col-md-6 mb-3 about-img">
+          <img src="{% static 'images/slide.jpg' %}" alt="img2" class="about-img" />
         </div>
       </div>
     </div>
-    <p class="text-secondary text-2">
-      quo omnis illo sequi at velit,
-      odit quod! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-      repellat iure laboriosam cum voluptatum, nam minima deserunt aut?
-      Distinctio voluptatibus dolor quaerat quo omnis illo sequi at velit,
-      odit quod! quo omnis illo sequi at velit,
-      odit quod! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-      repellat iure laboriosam cum voluptatum, nam minima deserunt aut?
-      Distinctio voluptatibus dolor quaerat quo omnis illo sequi at velit,
-      odit quod!
+  </div>
+</div>
+<div class="more-about">
+  <h1 class=" py-2 ">Mission, Vision & Values</h1>
+  <div>
+    <h3>Our Mission</h3>
+    <p class="text-secondary text-2 mt-3">
+    
+      Our mission is to save life and improve health of everyone comes to our hospital.
     </p>
+    
+  </div>
+  
+  
+  <div>
+    <h3 class="py-2">Our Vision</h3>
+    <p class="text-secondary text-2 mt-3">We shall define and provide medicines setting the bar for
+      compassion and innovation while always prioritizing patients and their families.</p>
+  </div>
+  
+  <div>
+    <h3 class="py-2">Our Value</h3>
+    <p class="text-secondary text-2 mt-3">Our Values is to put the people at first priority, do the right thing and how we continue the work helping peoples</p>
+  </div>
   
   </div>
+</div>
 
-  {%endblock%}
+
+<div class=" py-5 mb-3  safety">
+  <h1>Safety Maeasure To Protect From Covid-19</h1>
+  <p>1. Get Vaccinated and stay up to date on your COVID-19 vaccines</p>
+ <p>2.  Wear a mask</p>
+ <p>3.  Stay 6 feet away from others</p>
+ <p>4. Test to prevent spread to others</p>
+ <p>5.  Wash your hands often</p>
+ <p>6. Cover coughs and sneezes</p>
+ <p>7.  Monitor your health daily</p>
+<p> 8. Take precautions when you travel</p>
+</div>
+
+{%endblock%}
