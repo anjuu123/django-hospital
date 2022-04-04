@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import Add_Appointment, Add_Patient, Delete_Appointment, Delete_Patient, Index, About,Logout, Service, Contact, Login,Dashboard, View_Appointment, View_Doctor,Delete_Doctor,Add_Doctor, View_Patient
+from .views import Add_Appointment, Add_Patient, Delete_Appointment, Delete_Patient, Index,Logout, Service, Login,Dashboard, View_Appointment, View_Doctor,Delete_Doctor,Add_Doctor, View_Patient
 
 
 urlpatterns = [

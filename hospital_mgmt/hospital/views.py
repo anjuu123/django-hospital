@@ -103,13 +103,18 @@ def Add_Patient(request):
         c = request.POST['mobile']
         ad = request.POST['address']
         try:
+
             Patient.objects.create(name=n, mobile=c, address=ad)
             error="no"
         except:
-            error="Yes"
+              error="yes"
+    
 
-    d = {'error':error}
-    return render(request,'add_patient.html',d)
+    data = {'error':error}
+    return render(request,'add_patient.html',data)
+
+
+
 
     # views all patients
 
@@ -118,8 +123,12 @@ def View_Patient(request):
         return redirect('login')
 
     pat = Patient.objects.all()
-    d = {'pat' : pat}
-    return render(request, 'view_patient.html', d)
+    data = {'pat': pat}
+    return render(request, 'view_patient.html', data)
+
+    
+
+
 
 # delete patient by id
 def Delete_Patient(request, id):
@@ -172,4 +181,6 @@ def Delete_Appointment(request, id):
     appointment = Appointment.objects.get(id = id)
     appointment.delete()
     return redirect('view_patient')
+
+
 

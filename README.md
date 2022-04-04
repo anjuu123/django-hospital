@@ -1,5 +1,10 @@
 # Project Overview
 
+
+Admin login
+username: Admin
+Password: hospital123
+
 ## Project Schedule
 
 |  Day | Deliverable | Status
@@ -7,7 +12,7 @@
 |Day 1| Planning and Approval | Complete
 |Day 1| Set up backend files and structure | Complete
 |Day 2| Set up frontend files and structure | Complete
-|Day 3| CSS Styling and Responsive Design | InComplete
+|Day 3| CSS Styling and Responsive Design | Complete
 |Day 4| MVP & Bug Fixes & Adding Seed Data | InComplete
 |Day 4| Final Touches and deploying App | InComplete
 |Day 5| Add PostMVP model | InComplete
@@ -16,17 +21,19 @@
 
 ## Project Description
 
-Hospital Management App includes registration of patients, storing their details into the system.It is accessible by an administrator to view all the details of patient and doctor available in the hospital. The main function of this app is to retrieve data easily whenever it is required.
+Hospital Management system is used by hospitals  to store information into the system.It is accessible by an administrator to add, view all the details of patient, doctor, appointment  available in the hospital. The main function of this app is to retrieve data easily whenever it is required.
 
 This app will include a backend database using SQLite and Django and a frontend web application using HTML CSS and JS.
 
 
 ## User Stories
+Admin:
 
-Patient:
-As a Patient I should be able to signup, signin to hospital app so that my information can only be accessed by me.
-As a Patient I should be able to View available doctor
-As a Patient I should be able to take /view appointment status
+As a Admin I should be able to login in
+As a Admin I should be able to add Doctor, view Doctor
+As a Admin I should be able to add Patient, view Patient
+As a Admin I should be able to add Appointment, view Appointment
+
 
 ## Wireframes   
 
@@ -38,18 +45,18 @@ As a Patient I should be able to take /view appointment status
 ```
 ### MVP/PostMVP  
 
-#### MVP (examples)
+#### MVP 
 
-- 2 models(Patient, Appointment)
+-Admin login
+- models(Doctor, Patient, Appointment)
 - CRUD functionality 
 - Responsive design from mobile to desktop
 - Use bootstrap for design
 - Fully Deployed frontend and backend
 
 #### PostMVP 
--Add a Admin model
-- Add a Doctor models
-- Adding animations
+-Add a Patient login 
+-Add a Doctor login
 ```
 
 ## Routing Table
@@ -59,12 +66,11 @@ As a Patient I should be able to take /view appointment status
 | /patient    | POST      |    create    | add new patient  |
 | /patient     | GET       |    show       | show all  patient    |
 | /patient/:id | GET       |    show       | show one patient  |
-| /appointment | GET       |    show       | show all appointment |
-| /appointment/:id | PUT      |    update            | edit appointment |
-| /patient/:id | PUT      |    update            | edit patient|
-| /patient/:id | DELETE      |    delete            | delete patient |
-| /appointment/:id | DELETE      |    delete           | delete appointment |
-
+| /appointment | POST      |    create       | create appointment |
+| /appointment | GET      |    show           | show one appointment |
+| /doctor    | POST      |    create    | add new doctor  |
+| /doctor     | GET       |    show       | show all  doctor    |
+| /doctor/:id | GET       |    show       | show one doctor  |
 
 ## Functional Components
 

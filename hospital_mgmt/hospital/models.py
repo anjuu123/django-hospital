@@ -18,6 +18,7 @@ class Patient(models.Model):
     name = models.CharField(max_length=50)
     mobile = models.IntegerField(null=True)
     address = models.TextField()
+   
 
     def __str__(self):
         return self.name
@@ -29,6 +30,7 @@ class Appointment(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
+    
 
     def __str__(self):
         return self.Doctor.name + "__"+self.Patient.name
