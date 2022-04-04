@@ -1,8 +1,217 @@
-{% include 'base.html' %}
-{% include 'navigation.html' %}
-<br>
-<br>
-<br>
-<br>
-<h1 class="text-center">Our Services</h1>
-{% include 'footer.html' %}
+{% include 'base.html' %} {% include 'navigation.html' %} {% load static %}
+{%block content%}
+
+
+<h1 class="text-center services-h1">Our Services</h1>
+<p class="text-center">Following Services are provided by our hospital.</p>
+<div class="container">
+  <!-- Card deck -->
+ 
+  <div class="card-deck row">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <!-- Card -->
+      <div class="card">
+        <!--Card image-->
+        <div class="view overlay">
+          <img
+            class="card-img-top"
+            src="{% static 'images/s1.jpg' %}"
+            alt="img1"
+          />
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">Skilled Nursing</h4>
+          <!--Text-->
+          <p class="card-text">
+            Gifted attendants give both present moment and long haul, proficient
+            consideration to patients who require clinical benefits at home that
+            is because of an intense ailment, handicap, long haul medical issue,
+            or terminal disease. The medical caretaker visits the patient's home
+            to survey current wellbeing status and assess home security..
+          </p>
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <!-- Card -->
+      <div class="card mb-4">
+        <!--Card image-->
+        <div class="view overlay">
+          <img
+            class="card-img-top"
+            src="{% static 'images/s2.jpeg' %}"
+            alt="img2"
+          />
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">Physical Therapy Services</h4>
+          <!--Text-->
+          <p class="card-text">
+            Licensed therapists examine and treat persons who have physical
+            requirements as a consequence of sickness, injury, disability, or
+            surgery. Therapeutic activities to increase trunk and extremities
+            strength, range of motion, balance, endurance, and overall
+            reconditioning. Patients should get bed mobility and transfer
+            training to allow them to move around their surroundings as
+            effortlessly as feasible. Instruct on how to manage discomfort after
+            surgery or an injury.
+          </p>
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <!-- Card -->
+      <div class="card mb-4">
+        <!--Card image-->
+        <div class="view overlay">
+          <img
+            class="card-img-top"
+            src="{% static 'images/s3.jpeg' %}"
+            alt="img3"
+          />
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">Occupational Therapy Services</h4>
+          <!--Text-->
+          <p class="card-text">
+            Services provided by certified therapists who assess and treat
+            clients with self-care issues that are interfering with their
+            well-being. Dressing, grooming, bathing, food preparation, upper
+            body strengthening, fine motor skills training, and assistive device
+            training are some of the activities of daily living that are taught.
+          </p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <!-- Card -->
+      <div class="card">
+        <!--Card image-->
+        <div class="view overlay">
+          <img
+            class="card-img-top"
+            src="{% static 'images/s4.jpeg' %}"
+            alt="img4"
+          />
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">Medical Social Services</h4>
+          <!--Text-->
+          <p class="card-text">
+            Licensed medical social workers provide services. Medical social
+            workers with a license give assistance/counseling to patients by
+            addressing their financial, social, and emotional concerns, as well
+            as providing information about community services. Assessment of
+            social and emotional well-being, financial requirements assessment,
+            community resource planning, and home environment assessment
+          </p>
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <!-- Card -->
+      <div class="card mb-4">
+        <!--Card image-->
+        <div class="view overlay">
+          <img
+            class="card-img-top"
+            src="{% static 'images/s5.jpeg' %}"
+            alt="img5"
+          />
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">Speech Therapy Services</h4>
+          <!--Text-->
+          <p class="card-text">
+            Services provided by qualified therapists who examine and treat
+            clients who have swallowing or speech problems. Individuals who
+            require speech therapy are frequently, but not always, stroke
+            survivors. Training for swallowing and feeding issues. As a result
+            of a stroke or a head injury, cognitive problems and communication
+            therapies are required. Training in augmentative communication
+            technologies and voice issues.
+          </p>
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <!-- Card -->
+      <div class="card mb-4">
+        <!--Card image-->
+        <div class="view overlay">
+          <img
+            class="card-img-top"
+            src="{% static 'images/s6.jpeg' %}"
+            alt="img6"
+          />
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">Home Health Aide Services</h4>
+          <!--Text-->
+          <p class="card-text">
+            Personal care professionals give hands-on patient care in line with
+            the patient's needs and the plan of care. Bathing, oral care, hair
+            care, clothing, toileting, transferring, and so on are all examples
+            of personal hygiene and grooming. Providing modest workout
+            assistance, Maintaining domestic cleanliness, companionship and
+            support, respite care, doing errands, procuring household supplies,
+            serving meals and feeding carers for light cooking, shopping, and
+            medication pick-up At-home health-care assistance
+          </p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+         
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+
+  
+</div>
+{%endblock%} {% include 'footer.html' %}
