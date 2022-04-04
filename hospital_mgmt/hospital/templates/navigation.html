@@ -23,13 +23,17 @@
         {% endif %}
 
         {% if request.user.is_staff %}
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mr-auto sidenav" id="navAccordion" style="font-size: 20px;  color:#fff; font-family: 'Lato', sans-serif;">
+          <li class="nav-item" >
+            <a class="nav-link" href="#">Dashboard </a>
+          </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
               Doctor
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
              
               <a class="dropdown-item" href="{% url 'add_doctor' %}">Add Doctor</a>
               <a class="dropdown-item" href="{% url 'view_doctor' %}">View Doctor</a>
@@ -38,18 +42,18 @@
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
               Patient
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
               <a class="dropdown-item" href="{% url 'add_patient' %}">Add Patient</a>
               <a class="dropdown-item" href="{% url 'view_patient' %}">View Patient</a>
           </li>
 
 
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" >
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
               Appointment
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> 

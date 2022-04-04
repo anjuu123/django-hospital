@@ -3,6 +3,8 @@
 
 /* for mobile version */
 
+
+
 /* common tags */
 h1 {
     font-family: 'Lato', sans-serif;
@@ -41,10 +43,23 @@ p {
     font-family: 'Lato', sans-serif;
     color: #fff;
     font-size: 20px;
-    font-weight: bold;
 
 }
 
+
+
+#dropdown-menu
+{
+    font-family:'Lato', sans-serif ;
+    font-size: 20px;
+}
+
+
+/* form */
+form
+{
+    padding: 20px;
+}
 /* homepage image page */
 
 .homepage img {
@@ -101,8 +116,37 @@ h3 {
     font-weight: bold;
 }
 
+/* services */
+.card{
+    margin: 5% 0%;
+  }
+  
+  .card-body{
+    margin: 0% 0% 0% 3%;
+    padding: 6% 0%;
+  }
+  
+  .services-h1
+  {
+      margin: 20px;
+  }
+  .card-deck
+  {
+      background-color: cornflowerblue;
+  }
 
 
+
+  #login-form
+ { 
+     width: 25rem;
+      background-color: #f2f2f2;
+       padding: 40px; 
+       margin-left:20rem;
+    }
+  
+
+  
 /* footer  */
 .footer {
     position: fixed;

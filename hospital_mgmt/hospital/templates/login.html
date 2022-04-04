@@ -14,23 +14,26 @@
 {% endifequal %}
 {% ifequal error "no" %}
 <script>
-    alert('log in successfully');
+    alert('Login successfully');
     window.location = "{% url 'dashboard' %}"
 </script>
 {% endifequal %}
 
 
-<div class="container">
+<div class="container py-3"  style="width: 25rem; background-color: #f2f2f2; padding: 40px; margin-left:50rem; margin-top: 5rem;">
     <h2 class="text-center"> Login</h2>
     <form method="POST">
         {% csrf_token %}
-        <br>
-        <br>
-        <input type="text" class="form-control" name="uname" placeholder="Admin Name">
-<br>
-        <input type="password" class="form-control" name="pwd" placeholder="Password">
-<br>
-        <input type="submit" value="Login" class="form-control btn btn-primary">
+        <div class="form-group py-2 ">
+            <input type="text" class="form-control" name="uname" placeholder="Admin Name">
+        </div>
+       
+<div class="form-group">
+    <input type="password" class="form-control" name="pwd" placeholder="Password">
+</div>
+       
+
+        <input type="submit" value="Login" class="form-control btn btn-primary" style="width:6rem; margin-left: 100px; margin-top: 20px;">
     </form>
 </div>
 

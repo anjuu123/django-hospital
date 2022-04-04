@@ -20,19 +20,24 @@
 {% endifequal %}
 
 
-<div class="container">
+<div class="container"  style="width: 35rem; background-color: #f2f2f2; padding: 40px; margin-left:45rem; margin-top: 3rem;">
     <h2 class="text-center">Add Doctor</h2>
     <form method="POST">
         {% csrf_token %}
-        <br>
-        <br>
-        <input type="text" class="form-control" name="name" placeholder="Doctor Name">
-<br>
-        <input type="text" class="form-control" name="mobile" placeholder="Mobile">
-<br>
-<input type="text" class="form-control" name="speciality" placeholder="Speciality">
-<br>
-        <input type="submit" value="Submit" class="form-control btn btn-primary">
+        <div class="form-group">
+            <input type="text" class="form-control" name="name" placeholder="Doctor Name">
+
+        </div>
+<div class="form-group">
+    <input type="text" class="form-control" name="mobile" placeholder="Mobile">
+</div>
+        
+<div class="form-group">
+    <input type="text" class="form-control" name="speciality" placeholder="Speciality">
+
+</div>
+
+        <input type="submit" value="Submit" class="form-control btn btn-primary" style="width:6rem; margin-left: 13rem; margin-top: 20px;">
     </form>
 </div>
 
