@@ -1,11 +1,43 @@
 {% include 'base.html' %} {% load static %} {% include 'navigation.html' %}
 
 {%block content%}
+<h1 class="text-center py-2">Dashboard</h1
 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow ">
+                    <img src="{% static 'images/slide3.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title text-center dash-h2">Total Doctors</h2>
+                        <p class="card-text text-center  dash-p">{{d}}</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="card shadow">
+                    <img src="{% static 'images/patient.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title text-center dash-h2">Total Patient</h2>
+                        <p class="card-text text-center  dash-p">{{p}}</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="card shadow">
+                    <img src="{% static 'images/appo.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title text-center dash-h2">Total Appointment</h2>
+                        <p class="card-text text-center dash-p">{{a}}</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
 {%endblock%}
-
-
-
-
 {% include 'footer.html' %}
+
+

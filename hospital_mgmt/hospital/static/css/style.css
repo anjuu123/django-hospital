@@ -145,7 +145,24 @@ h3 {
 
 
     
-    /* view tables */
+/* dashboard */
+
+.card{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.dash-h2
+{
+    font-size: 2rem;
+}
+
+.dash-p
+{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
     
 /* footer  */
 .footer {

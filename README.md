@@ -66,11 +66,14 @@ As a Admin I should be able to add Appointment, view Appointment
 | /patient    | POST      |    create    | add new patient  |
 | /patient     | GET       |    show       | show all  patient    |
 | /patient/:id | GET       |    show       | show one patient  |
+| /patient/:id | DELETE       |    remove      | remove  patient by id  |
 | /appointment | POST      |    create       | create appointment |
 | /appointment | GET      |    show           | show one appointment |
+| /appointment/:id | DELETE       |    remove      | remove  appointment by id  |
 | /doctor    | POST      |    create    | add new doctor  |
 | /doctor     | GET       |    show       | show all  doctor    |
 | /doctor/:id | GET       |    show       | show one doctor  |
+| /doctor/:id | DELETE       |    remove      | remove  doctor by id  |
 
 ## Functional Components
 
