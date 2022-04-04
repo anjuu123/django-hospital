@@ -55,11 +55,8 @@ p {
 }
 
 
-/* form */
-form
-{
-    padding: 20px;
-}
+
+
 /* homepage image page */
 
 .homepage img {
@@ -146,7 +143,10 @@ h3 {
     }
   
 
-  
+
+    
+    /* view tables */
+    
 /* footer  */
 .footer {
     position: fixed;
