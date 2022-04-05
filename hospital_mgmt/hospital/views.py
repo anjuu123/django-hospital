@@ -161,6 +161,7 @@ def Add_Appointment(request):
         return redirect('login')
     doctor1 = Doctor.objects.all()
     patient1 = Patient.objects.all()
+    
     if request.method=="POST":
         d = request.POST['doctor']
         p = request.POST['patient']
@@ -194,7 +195,6 @@ def Delete_Appointment(request, id):
         return redirect('login')
     appointment = Appointment.objects.get(id = id)
     appointment.delete()
-    return redirect('view_patient')
-
+    return redirect('view_appointment')
 
 

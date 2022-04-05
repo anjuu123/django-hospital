@@ -26,7 +26,6 @@
                <td> {{i.time}}</td>
                <td><a href="{% url 'delete_appointment' i.id %}" 
                 onclick="return confirm('Are you sure you want to delete?')"class="btn btn-danger">Delete</a></td>  
-
             </tr>
             {% endfor %}
         </tbody>
