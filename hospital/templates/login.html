@@ -1,14 +1,12 @@
 {% include 'base.html' %}
 {% include 'navigation.html' %}
 {%block content%}
-<br>
-<br>
-<br>
+
 <!-- show alert if login success -->
 
 {% ifequal error "yes" %}
 <script>
-    alert('invalid');
+    alert('Invalid');
     
 </script>
 {% endifequal %}
