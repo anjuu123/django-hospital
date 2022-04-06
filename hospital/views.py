@@ -10,18 +10,15 @@ from .models import Appointment, Doctor, Patient
 def Index(request):
     return render(request, 'index.html')
 
-def About(request):
-    return render(request, 'about.html')
-
-def Contact(request):
-    return render(request, 'contact.html')
-
 def Service(request):
     return render(request, 'service.html')
 
+
+# dashboard view
 def Dashboard(request):
     if not request.user.is_staff:
         return redirect('login')
+
     doctors = Doctor.objects.all()
     patient = Patient.objects.all()
     appointment = Appointment.objects.all()
