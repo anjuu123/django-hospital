@@ -51,6 +51,7 @@ netifaces==0.10.4
 oauthlib==3.1.0
 olefile==0.46
 paramiko==2.6.0
+pbr==5.8.1
 pexpect==4.6.0
 Pillow==9.0.1
 pipenv==2022.1.8
@@ -83,6 +84,7 @@ six==1.16.0
 sqlparse==0.2.4
 svglib==1.2.1
 systemd-python==234
+testresources==2.0.1
 tinycss2==1.1.1
 toml==0.10.2
 tqdm==4.63.1
